@@ -26,5 +26,12 @@ public class App {
 
         new BitcoinPayment(
             new SmsChannel()).notifyPayment(75);
+
+        // Push
+        new OnlinePaymentNotification(
+            new PushChannel(), "Credit Card").notifyPayment(60);
+
+        new CashOnDeliveryPayment(
+            new PushChannel()).notifyPayment(15);
     }
 }
