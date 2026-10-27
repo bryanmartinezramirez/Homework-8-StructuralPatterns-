@@ -1,0 +1,12 @@
+package com.example;
+
+public abstract class PaymentNotification {
+
+    protected NotificationChannel channel;
+
+    public PaymentNotification(NotificationChannel channel) {
+        this.channel = channel;
+    }
+
+    public abstract void notifyPayment(double amount);
+}
